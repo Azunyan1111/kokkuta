@@ -1,7 +1,7 @@
 package key
 
 
-const CONSUMER_KEY = "2Zkg66uednCtGVtQDNUzEVeOd"
-const CONSUMER_SECRET = "vo41i0Kbiua0vhDpuEyAScWDtgbKJm5lWax99U3WEA628z0NGh"
+const CONSUMER_KEY = "your key"
+const CONSUMER_SECRET = "your key"
 const ACCESS_TOKEN = "your key"
 const ACCESS_TOKEN_SECRET = "your key"
