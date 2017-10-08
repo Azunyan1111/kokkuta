@@ -29,5 +29,5 @@ Makefileとかよくわからないので書きます。
 ```hoge.sql
 create database kokkuta;
 use kokkuta;
-create table history(id int auto_increment not null,body text,creation_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY (id));
+create table history(id int auto_increment not null,body text,creation_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,good int not null DEFAULT 0,PRIMARY KEY (id));
 ```
