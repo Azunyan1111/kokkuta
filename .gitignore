@@ -1,2 +1,4 @@
-/key/*
-/.idea/*
+/key/
+/.idea/
+*.test
+*.swp
