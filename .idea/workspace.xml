@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da7b28f4-95fe-41bc-9610-032d39948394" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contoroller/user_controller.go" afterPath="$PROJECT_DIR$/contoroller/user_controller.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/key/key.go" afterPath="$PROJECT_DIR$/key/key.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/history.go" afterPath="$PROJECT_DIR$/mysql/history.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.go" afterPath="$PROJECT_DIR$/server.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/twitter.go" afterPath="$PROJECT_DIR$/twitter.go" />
-    </list>
+    <list default="true" id="da7b28f4-95fe-41bc-9610-032d39948394" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
