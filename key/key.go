@@ -1,7 +1,7 @@
 package key
 
 
-const CONSUMER_KEY = "K2sopI9QPYIJtzcAoxPNCuq1f"
-const CONSUMER_SECRET = "OyaaLJy66xRDEBN0JUCw2TmGQim32VBTFCWXgG5eaWVJZc3vCO"
-const ACCESS_TOKEN = "3016301582-eq80upa1ckRtLQcjOsrHNYVgsWWeh6X4RqTh9Bz"
-const ACCESS_TOKEN_SECRET = "nuR2z56rYzfWvAIHYHF9cnVplrfaPhV5ArBlEz2aBBRsq"
+const CONSUMER_KEY = "your key"
+const CONSUMER_SECRET = "your key"
+const ACCESS_TOKEN = "your key"
+const ACCESS_TOKEN_SECRET = "your key"
