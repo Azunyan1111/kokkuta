@@ -6,6 +6,7 @@ import (
 	"github.com/ChimeraCoder/anaconda"
 	"net/url"
 	"time"
+	"log"
 )
 
 func main() {
@@ -27,7 +28,7 @@ func sendTweet(api *anaconda.TwitterApi, body string, v url.Values) (tweetId ana
 	response, err := api.PostTweet(body, v)
 	if err != nil {
 		//TODO:サーバー立ててからちゃんと修正しよう！
-		panic(err)
+		log.Println(err)
 	}
 	// Tweet型のidってのがツイートしたツイートのid。削除する時に使う。
 	return response
@@ -38,7 +39,7 @@ func sendTweetDelete(api *anaconda.TwitterApi, tweet anaconda.Tweet, userObject 
 	response, err := api.DeleteTweet(tweet.Id, userObject)
 	if err != nil {
 		//TODO:サーバー立ててからちゃんと修正しよう！
-		panic(err)
+		log.Println(err)
 	}
 	// Tweet型のidってのがツイートしたツイートのid。削除する時に使う。
 	return response

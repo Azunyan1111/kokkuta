@@ -6,7 +6,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-type Kokutta struct {
+type Kokkuta struct {
 	ID   int64
 	Body string
 	Time string
@@ -14,7 +14,7 @@ type Kokutta struct {
 }
 
 func SetHistory(s string) {
-	db, err := sql.Open("mysql", "root:@/kokutta")
+	db, err := sql.Open("mysql", "root:@/kokkuta")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -26,7 +26,7 @@ func SetHistory(s string) {
 }
 
 func AddGood(id string) {
-	db, err := sql.Open("mysql", "root:@/kokutta")
+	db, err := sql.Open("mysql", "root:@/kokkuta")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -37,8 +37,8 @@ func AddGood(id string) {
 	}
 }
 
-func GetHistory() []Kokutta {
-	db, err := sql.Open("mysql", "root:@/kokutta")
+func GetHistory() []Kokkuta {
+	db, err := sql.Open("mysql", "root:@/kokkuta")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -49,7 +49,7 @@ func GetHistory() []Kokutta {
 		fmt.Println(err)
 	}
 
-	history := make([]Kokutta, 0)
+	history := make([]Kokkuta, 0)
 
 	for rows.Next() {
 		var id_ int64
@@ -60,7 +60,7 @@ func GetHistory() []Kokutta {
 			fmt.Println(err)
 		}
 
-		var historyData Kokutta
+		var historyData Kokkuta
 		historyData.ID = id_
 		historyData.Body = body_
 		historyData.Time = time_

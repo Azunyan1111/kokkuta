@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./contoroller"
+	"github.com/Azunyan1111/kokkuta/contoroller"
 	"net/http"
 )
 

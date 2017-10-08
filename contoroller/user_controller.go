@@ -1,26 +1,27 @@
 package contoroller
 
 import (
-	"../key" //TODO:
+	"github.com/Azunyan1111/kokkuta/key"
 	"fmt"
 	"github.com/ChimeraCoder/anaconda"
+	"github.com/garyburd/go-oauth/oauth"
 	"net/http"
 	"net/url"
 	"time"
 
-	"../mysql"
-	"github.com/garyburd/go-oauth/oauth"
+	"github.com/Azunyan1111/kokkuta/mysql"
 	"html/template"
 
 	_ "github.com/go-sql-driver/mysql"
 	"strconv"
+	"log"
 )
 
 type Page struct {
 	Title     string
 	Message   string
 	SetCookie bool
-	History   []mysql.Kokutta
+	History   []mysql.Kokkuta
 }
 
 var credential *oauth.Credentials
@@ -99,7 +100,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		page = Page{"告ったー", "", true, mysql.GetHistory()}
 	}
 
-	tmpl, err := template.ParseFiles("mid/azunyan1111/html/index.tpl")
+	tmpl, err := template.ParseFiles("/Users/admin/go/src/github.com/Azunyan1111/kokkuta/html/index.tpl")
 	if err != nil {
 		fmt.Fprintf(w, err.Error())
 		return
@@ -118,6 +119,7 @@ func RequestTokenHandler(w http.ResponseWriter, r *http.Request) {
 	//リクエストしてユーザーを飛ばすURLとか貰う
 	url, tmpCred, err := anaconda.AuthorizationURL("http://localhost:8080/access_token")
 	if err != nil {
+		log.Println(err.Error())
 		fmt.Fprintf(w, "%v", err)
 		return
 	}
